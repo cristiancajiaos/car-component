@@ -19,3 +19,18 @@ export function superCar() {
   car.description = 'Super';
   return car;
 }
+
+/* Ejemplo 3: testCar() */
+class MockEngine extends Engine {
+  public override cylinders: number = 8;
+}
+
+class MockTires extends Tires {
+  public override make: string = 'YokoGoodStone';
+}
+
+export function testCar() {
+  let car = new Car(new MockEngine(), new MockTires());
+  car.description = 'Test';
+  return car;
+}

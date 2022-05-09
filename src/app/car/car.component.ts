@@ -2,7 +2,7 @@ import { CarFactory } from './car-factory';
 import { CarNoDi } from './car-no-di';
 import { Component, OnInit } from '@angular/core';
 import { Car, Engine, Tires } from './car';
-import { simpleCar, superCar } from './car-creations';
+import { simpleCar, superCar, testCar } from './car-creations';
 
 @Component({
   selector: 'app-car',
@@ -22,6 +22,9 @@ export class CarComponent implements OnInit {
 
   /* superCar a partir de clase Car */
   superCar = superCar();
+
+  /* testCar a partir de clase Car */
+  testCar = testCar();
 
   constructor(
     public car: Car
